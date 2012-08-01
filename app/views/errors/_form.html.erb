@@ -1,0 +1,17 @@
+<% if @error.errors.present? %>
+	<p>Whoops! You seem to have an error with your error...</p>
+	<% @error.errors.full_messages.each do |msg| %>
+		<p><%= msg %>.</p>
+	<% end %>
+<% end %>
+<%= form_for @error do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.label :error_message %>
+	<%= f.text_area :error_message %>
+	<%= f.label :explanation %>
+	<%= f.text_area :explanation %>
+	<%= f.submit %>
+<% end %>

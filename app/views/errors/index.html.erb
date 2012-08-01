@@ -1,0 +1,7 @@
+<h1>Errors</h1>
+<hr/>
+<% @errors.each do |error| %>
+	<p><%= error.title %></p>
+	<p>Created by <%= error.name %> <%= time_ago_in_words(error.created_at) %> ago.</p>
+	<hr/>
+<% end %>
