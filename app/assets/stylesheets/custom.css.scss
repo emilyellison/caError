@@ -17,4 +17,10 @@
 	a:hover {
 		color:cornflowerblue;
 	}
+	.btn-primary {
+		background:-webkit-linear-gradient(cornflowerblue, royalblue);
+	}
+	.btn-primary:hover {
+		background:-webkit-linear-gradient(royalblue, cornflowerblue);
+	}
 }
