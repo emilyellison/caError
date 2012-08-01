@@ -7,4 +7,11 @@
 }
 .content {
 	margin:20px 0px;
+	a {
+		text-decoration:none;
+		color:royalblue;
+	}
+	a:hover {
+		color:cornflowerblue;
+	}
 }
