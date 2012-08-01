@@ -1,4 +1,5 @@
 <h1><%= @error.title %></h1>
-<p><%= @error.error_message %></p>
+<br/>
+<p class='well'><%= @error.error_message %></p>
 <p><%= @error.explanation %></p>
 <p>Created by <%= @error.name %> <%= time_ago_in_words(@error.created_at) %> ago.</p>
