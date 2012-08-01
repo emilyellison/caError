@@ -1,3 +1,5 @@
+<br/>
+<div class='well'>
 <% if @error.errors.present? %>
 	<p>Whoops! You seem to have an error with your error...</p>
 	<% @error.errors.full_messages.each do |msg| %>
@@ -6,12 +8,13 @@
 <% end %>
 <%= form_for @error do |f| %>
 	<%= f.label :title %>
-	<%= f.text_field :title %>
+	<%= f.text_field :title, class: 'span6' %>
 	<%= f.label :name %>
-	<%= f.text_field :name %>
+	<%= f.text_field :name, class: 'span6' %>
 	<%= f.label :error_message %>
-	<%= f.text_area :error_message %>
+	<%= f.text_area :error_message, class: 'span6' %>
 	<%= f.label :explanation %>
-	<%= f.text_area :explanation %>
-	<%= f.submit %>
+	<%= f.text_area :explanation, class: 'span6' %><br/>
+	<%= f.submit 'Submit', class: 'btn btn-primary btn-large' %>
 <% end %>
+</div>
