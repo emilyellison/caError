@@ -8,7 +8,10 @@
 	<div class='span12'>
 		<hr/>
 		<% @errors.each do |error| %>
-			<p><%= link_to error.title, error_url(error.id) %> <%= link_to 'Edit', edit_error_url(error.id) %> <%= link_to 'Delete', error_url(error.id), method: :delete, confirm: 'This error will self-destruct in ...3 ...2 ...1' %></p>
+			<p>
+				<%= link_to error.title, error_url(error.id) %> 
+				<%= link_to "<i class='icon-pencil'></i>".html_safe, edit_error_url(error.id) %> 
+				<%= link_to "<i class='icon-trash'></i>".html_safe, error_url(error.id), method: :delete, confirm: 'This error will self-destruct in ...3 ...2 ...1' %></p>
 			<p>Created by <%= error.name %> <%= time_ago_in_words(error.created_at) %> ago.</p>
 			<hr/>
 		<% end %>
